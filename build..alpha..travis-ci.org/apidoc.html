@@ -61,69 +61,12 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.babel-root-import">module babel-root-import</a><ol>
 
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.babel-root-import.default">
-            function <span class="apidocSignatureSpan">babel-root-import.</span>default
-            <span class="apidocSignatureSpan">(_ref)</span>
-            </a>
-
-        </li>
-
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.babel-root-import" id="apidoc.module.babel-root-import">module babel-root-import</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.babel-root-import.default" id="apidoc.element.babel-root-import.default">
-        function <span class="apidocSignatureSpan">babel-root-import.</span>default
-        <span class="apidocSignatureSpan">(_ref)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">default = function (_ref) {
-  var t = _ref[&#x27;types&#x27;];
-  return {
-    &#x27;visitor&#x27;: {
-      CallExpression: function CallExpression(path, state) {
-        if (path.node.callee.name !== &#x27;require&#x27;) {
-          return;
-        }
-
-        var args = path.node.arguments;
-        if (!args.length) {
-          return;
-        }
-
-        var firstArg = traverseExpression(t, args[0]);
-
-        if (firstArg) {
-          firstArg.value = replacePrefix(firstArg.value, state.opts, state.file.opts.filename);
-        }
-      },
-      ImportDeclaration: function ImportDeclaration(path, state) {
-        path.node.source.value = replacePrefix(path.node.source.value, state.opts, state.file.opts.filename);
-      },
-      ExportNamedDeclaration: function ExportNamedDeclaration(path, state) {
-        if (path.node.source) {
-          path.node.source.value = replacePrefix(path.node.source.value, state.opts, state.file.opts.filename);
-        }
-      },
-      ExportAllDeclaration: function ExportAllDeclaration(path, state) {
-        if (path.node.source) {
-          path.node.source.value = replacePrefix(path.node.source.value, state.opts, state.file.opts.filename);
-        }
-      }
-    }
-  };
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
 
 </div>
 
