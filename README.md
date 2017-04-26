@@ -1,6 +1,6 @@
 # npmdoc-babel-root-import
 
-#### api documentation for  [babel-root-import (v4.1.8)](https://github.com/entwicklerstube/babel-root-import#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-babel-root-import.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-babel-root-import) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-babel-root-import.svg)](https://travis-ci.org/npmdoc/node-npmdoc-babel-root-import)
+#### basic api documentation for  [babel-root-import (v4.1.8)](https://github.com/entwicklerstube/babel-root-import#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-babel-root-import.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-babel-root-import) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-babel-root-import.svg)](https://travis-ci.org/npmdoc/node-npmdoc-babel-root-import)
 
 #### Babel Plugin to enable relative root-import
 
@@ -72,7 +72,8 @@
         "test": "mocha test/*.spec.js --require config/mocha.js --compilers js:babel-core/register",
         "test-watch": "mocha test/*.spec.js --require config/mocha.js --compilers js:babel-core/register --watch"
     },
-    "version": "4.1.8"
+    "version": "4.1.8",
+    "bin": {}
 }
 ```
 
